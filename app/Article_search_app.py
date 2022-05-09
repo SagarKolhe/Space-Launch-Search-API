@@ -9,7 +9,7 @@ try:
     config.read('./app/app.ini')
 
     def connect_elasticsearch(**kwargs):
-        _es_config = config.get("Elasticsearch", "HOST1")
+        _es_config = config.get("Elasticsearch", "HOST2")
         _es_hosts = [_es_config]
         if 'hosts' in kwargs.keys():
             _es_hosts = kwargs['hosts']

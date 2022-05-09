@@ -33,7 +33,7 @@ try:
         def __init__(self):
             self.config = ConfigParser()
             self.config.read('./app/app.ini')
-            self.es = Elasticsearch(self.config.get("Elasticsearch", "HOST1"))
+            self.es = Elasticsearch(self.config.get("Elasticsearch", "HOST2"))
             # print(self.es.ping())
 
             self.data = None
