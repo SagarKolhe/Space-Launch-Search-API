@@ -18,7 +18,7 @@
 
 **Step 2**: We run the run.sh script, which pull the data from the Public API (https://api.spaceflightnewsapi.net/v3/documentation#/Article/get_articles) and ingest that data inside the Elasticsearch.
 
-**Step 3**: Now, we run our flask search app through the docker container. Build the docker file with this command as "docker build -t spaceflightnews."
+**Step 3**: Now, we run our flask search app through the docker container. Build the docker file with this command as "docker build -t spaceflightnews ."
 
 **Step 4**: Run the docker file with this command as "docker run --net="mybridge" -p 5000:5000 spaceflightnews"
 

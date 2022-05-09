@@ -7,7 +7,7 @@ try:
     if __name__ == '__main__':
         config = ConfigParser()
         config.read('./app/app.ini')
-        print("Sections : ", config.sections())
+        # print("Sections : ", config.sections())
         logging.basicConfig(filename=config.get("Files", "LOG_FILE"), level=logging.INFO)
         logging.info("\n Starting the service......!!")
         APP.main()
