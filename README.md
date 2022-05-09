@@ -2,9 +2,15 @@
 
 **Pre-requisites:**
 
-1. Docker should be installed on your machine
+1. python version 3.7
 
-2. There should be docker network called "mybridge"
+2. Elasticsearch python client version should be 7.16.3
+
+3. Elasticsearch docker image version should be 6.6.1
+
+4. Docker should be installed on your machine
+
+5. There should be docker network called "mybridge"
 
 **Workflow:**
 
