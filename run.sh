@@ -1,0 +1,1 @@
+python /home/sagar/PycharmProjects/assignment/app/Data_extraction_ingestion.py
