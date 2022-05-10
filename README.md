@@ -20,7 +20,7 @@
 
 **Step 3**: Now, we run our flask search app through the docker container. Build the docker file with this command as "docker build -t spaceflightnews ."
 
-**Step 4**: Run the docker file with this command as "docker run --net="mybridge" -p 5000:5000 spaceflightnews"
+**Step 4**: Run the docker file with this command as "docker run --net="mybridge" --name searchsvc -p 5000:5000 spaceflightnews"
 
 **Step 5**: Provide the query inside the brower url as "http://172.18.0.3:5000/search?q=NASA"
 
