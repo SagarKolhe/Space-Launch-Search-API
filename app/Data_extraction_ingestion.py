@@ -130,5 +130,5 @@ def main():
     data_extract_ingest.DataIngestion(data)
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
