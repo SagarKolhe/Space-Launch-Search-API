@@ -1,1 +1,1 @@
-python /home/sagar/PycharmProjects/assignment/app/Data_extraction_ingestion.py
+python ./app/Data_extraction_ingestion.py

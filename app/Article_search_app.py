@@ -9,6 +9,9 @@ try:
     config.read('./app/app.ini')
 
     def connect_elasticsearch(**kwargs):
+        """
+            Ensures Elasticsearch connection is established or not
+        """
         _es_config = config.get("Elasticsearch", "HOST2")
         _es_hosts = [_es_config]
         if 'hosts' in kwargs.keys():
@@ -26,11 +29,21 @@ try:
     # Default route
     @app.route("/")
     def home():
+        """
+        :return: return the string to home route as "Welcome to Spaceflight's News Articles.....!!"
+        """
         return "<h3>Welcome to Spaceflight's News Articles.....!!</h3>"
 
 
     @app.route('/search', methods=['GET'])
     def search():
+        """
+        :return: Returns the list of articles on the elasticsearch from the index called "articles" whose title
+                 contains q as sub-string.
+
+                 Example: Provide the query inside the brower url as "http://172.18.0.3:5000/search?q=NASA".
+                          This will return the Articles inside the Elasticsearch which matches title with "NASA" as sub-string.
+        """
         query_string = request.args.get('q')
         final_query = {"match": {"title": query_string}}
         result = es.search(index="articles", query=final_query)
