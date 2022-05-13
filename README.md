@@ -32,7 +32,7 @@ By using the concept called 1) volumes 2) Bind Mount.
 
 1) Volumes:-
 For this use docker run command as:
-“docker run -d -v es-data:/usr/share/elasticsearch/data  --name container22 --net="mybridge"  -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.6.1”
+“docker run -d -v es-data:/usr/share/elasticsearch/data  --name elasticsearch --net="mybridge"  -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:6.6.1”
 
 2) Bind Mount:-
 a. Set permissions to:
